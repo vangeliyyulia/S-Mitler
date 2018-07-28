@@ -2,7 +2,6 @@
     font-size: 1.4rem;
     
     &__list {
-        text-align: center;
         list-style: none;
     }
 
@@ -12,7 +11,36 @@
     }
 
     &__link {
-        background-color: #2c2c2c;
-        color: $accent;
+        color: #979797;
+        text-decoration: none;
+        display: block;
+        padding: 2rem 4rem;
+        margin-top: -20px;
+        margin-bottom: -20px;
+        transition: color .25s ease, background-color .5s ease;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            transition: color .25s ease;
+            content: '\f219';
+            font-family: fontawesome;
+            margin-right: 8px;
+            text-decoration: none;
+            font-size: 12px;
+            color: #979797;
+            position: absolute;
+            left: 1.5rem;
+            top: 2.2rem;
+        }
+
+        &.active, &:hover {
+            background-color: #2c2c2c;
+            color: $accent;
+
+            &::before {
+                color: $accent;
+            }               
+        }
     }
 }
