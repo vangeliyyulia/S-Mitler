@@ -1,0 +1,39 @@
+.header {
+    &__top {
+        display: flex;
+        list-style: none;
+        margin-top: 2.6rem;
+    }
+
+    &__logo {
+        width: 12.5rem;
+        height: auto;
+    }
+
+    &__phone {
+        font-family: 'FiraSansRegular';
+        font-size: 2.2rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        .fa-mobile {
+            color: #666;  
+            padding-right: .7rem;
+            margin-top: -.3rem;
+       }
+    }
+}
+
+.hamburger-box {
+	width: 34px;
+}
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+	border-radius: 0;
+	background-color: #fff;
+	height: 2px;
+	width: 34px;
+}
+

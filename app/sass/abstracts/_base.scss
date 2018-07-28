@@ -1,0 +1,115 @@
+@font-face {
+	font-family: 'FiraSansRegular';
+	src: local('FiraSansRegular'),
+		   url('../fonts/FiraSansRegular/FiraSansRegular.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+}
+
+@font-face {
+	font-family: 'RalewayRegular';
+	src: local('RalewayRegular'),
+		   url('../fonts/RalewayRegular/RalewayRegular.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+}
+
+@font-face {
+	font-family: 'RalewayBold';
+	src: local('RalewayBold'),
+		   url('../fonts/RalewayBold/RalewayBold.woff') format('woff');
+	  font-weight: bold;
+	  font-style: bold;
+}
+
+@font-face {
+	font-family: 'RalewayExtraBold';
+	src: local('RalewayExtraBold'),
+		   url('../fonts/RalewayExtraBold/RalewayExtraBold.woff') format('woff');
+	  font-weight: 800;
+	  font-style: bold;
+}
+
+@font-face {
+	font-family: 'RalewayLight';
+	src: local('RalewayLight'),
+		   url('../fonts/RalewayLight/RalewayLight.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+}
+
+@font-face {
+	font-family: 'RalewaySemiBold';
+	src: local('RalewaySemiBold'),
+		   url('../fonts/RalewaySemiBold/RalewaySemiBold.woff') format('woff');
+	  font-weight: 600;
+	  font-style: normal;
+}
+
+@font-face {
+	font-family: 'RalewayThin';
+	src: local('RalewayThin'),
+		   url('../fonts/RalewayThin/RalewayThin.woff') format('woff');
+	  font-weight: 100;
+	  font-style: normal;
+}
+
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: rgba(0,0,0,.25);
+	border-color: rgba(0,0,0,.25);
+}
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  
+}
+
+body {
+    position: relative;
+	line-height: 1.75;
+	font-family: $default-font;
+	overflow-x: hidden;
+	opacity: 1;
+}
+
+.container {
+    width: auto;
+    max-width: 132rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
