@@ -1,9 +1,5 @@
 .nav {
     font-size: 1.4rem;
-    
-    &__list {
-        list-style: none;
-    }
 
     &__item {
         display: block;
@@ -12,11 +8,7 @@
 
     &__link {
         color: #979797;
-        text-decoration: none;
         display: block;
-        padding: 2rem 4rem;
-        margin-top: -20px;
-        margin-bottom: -20px;
         transition: color .25s ease, background-color .5s ease;
         position: relative;
 
@@ -31,11 +23,11 @@
             color: #979797;
             position: absolute;
             left: 1.5rem;
-            top: 2.2rem;
+            top: 1rem;
+            color: #fff;
         }
 
         &.active, &:hover {
-            background-color: #2c2c2c;
             color: $accent;
 
             &::before {
@@ -43,4 +35,31 @@
             }               
         }
     }
+}
+
+.active {
+    background-color: #323232;
+}
+
+// Mmenu Styles
+.mm-title img {
+    width: 12.5rem;
+    height: auto;
+}
+
+.mm-navbar {
+    border: none;
+}
+
+.mm-panels>.mm-panel>.mm-listview:first-child, .mm-panels>.mm-panel>.mm-navbar+.mm-listview {
+    margin-top: 0;
+}
+
+.mm-listview>li:not(.mm-divider):after {
+    border: none;
+}
+
+.mm-listview>li>a, .mm-listview>li>span {
+    padding: 1rem 2rem 1rem 3.5rem;
+    margin-left: 6rem;
 }

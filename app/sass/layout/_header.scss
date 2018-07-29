@@ -34,6 +34,40 @@
     &__phone-text {
         margin-top: -1rem;
     }
+
+    &__content {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin: 7rem 6rem;
+    }
+
+    &__welcome {
+        font-family: 'RalewayRegular';
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__heading {
+        font-family: 'RalewayThin';
+        font-size: 6.7rem;
+        text-transform: uppercase;
+    }
+
+    &__city {
+        font-family: 'RalewayRegular';
+        font-size: 1.8rem;
+        text-transform: uppercase;    
+    }
+
+    &__description {
+        font-family: 'RalewayRegular';
+        font-size: 1.6rem;
+        text-align: center;
+    }
 }
 
 .hamburger-box {
