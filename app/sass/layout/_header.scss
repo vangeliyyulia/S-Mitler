@@ -3,10 +3,30 @@
     background-image: url(../img/top-bg.jpg);
     background-size: cover;
     background-position: top center;
+    min-height: 70rem;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: rgba(255,255,255,.06);
+        width: 1px;
+        height: 100%;
+        right: 7rem;
+        top: 0;
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
 
     &__list {
         display: flex;
         list-style: none;
+
+        @include respond(tab-port) {
+            padding: 0 2rem;
+        }
     }
 
     &__logo {
@@ -28,11 +48,20 @@
             color: #666;  
             padding-right: .7rem;
             margin-top: -1.2rem;
+
+            @include respond(phone) {
+                display: none;
+            }
        }
     }
 
     &__phone-text {
         margin-top: -1rem;
+        margin-right: 2rem;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &__content {
@@ -43,35 +72,146 @@
         align-items: center;
         width: 50%;
         margin: 7rem 6rem;
+
+        @include respond(phone) {
+            width: 100%;
+            margin: 3rem 0;
+        }
     }
 
     &__welcome {
         font-family: 'RalewayRegular';
         font-size: 1.4rem;
         text-transform: uppercase;
+        position: relative;
+
+        @include respond(phone) {
+            font-size: 1.13rem;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            margin-right: 1rem;
+            width: 7.5vw;
+            height: 1px;
+            right: 100%;
+            top: 50%;
+            background-color: #fff;
+
+            @include respond(tab-port) {
+                width: 3vw;
+            }
+
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            margin-left: 1rem;
+            width: 7.5vw;
+            height: 1px;
+            left: 100%;
+            top: 50%;
+            background-color: #fff;    
+            
+            @include respond(tab-port) {
+                width: 3vw;
+            }
+
+            @include respond(phone) {
+                display: none;
+            }
+        }
     }
 
     &__heading {
         font-family: 'RalewayThin';
         font-size: 6.7rem;
         text-transform: uppercase;
+        border-bottom: 1px solid #fff;
+        outline-offset: 3rem;
+        margin-bottom: 2.5rem;
+
+        @include respond(tab-port) {
+            font-size: 4.7rem;
+        }
+
+        @include respond(phone) {
+            font-size: 2.8rem;
+        }
     }
 
     &__city {
         font-family: 'RalewayRegular';
         font-size: 1.8rem;
-        text-transform: uppercase;    
+        text-transform: uppercase; 
+        margin-bottom: 4rem;
+        
+        & .fa {
+            margin-right: 10px;
+            font-size: 12px;
+            color: #555;
+
+            &:last-child {
+                margin-right: inherit;
+                margin-left: 10px;
+            }
+        }
     }
 
     &__description {
         font-family: 'RalewayRegular';
         font-size: 1.6rem;
         text-align: center;
+        margin-bottom: 2.5rem;
+
+        @include respond(phone) {
+            font-size: 1.4rem;
+            width: 80%;
+        }
+    }
+
+    &__contacts {
+        border-top: rgba(255,255,255,.06) 1px solid;
+        padding: 1.25rem;
+        width: 100%;
+        background-color: rgba(21,21,21,.15);
+        font-family: 'RalewayRegular';
+        color: #fff;
+        font-weight: 300;
+        font-size: 1.4rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    &__contacts-list {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+    }
+
+    &__contacts-item {
+        & .fa {
+            margin-right: 5px;
+            color: #555;
+        }
     }
 }
 
 .hamburger-box {
-	width: 34px;
+    width: 34px;
+    margin-right: -1rem;
 }
 
 .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
@@ -79,5 +219,36 @@
 	background-color: #fff;
 	height: 2px;
 	width: 34px;
+}
+
+.social {
+    &__list {
+        list-style: none;
+        position: absolute;
+        right: 0;
+        top: 50%;
+
+        @include respond(tab-port) {
+            right: 2rem;
+        }
+    }
+
+    &__link {
+        color: #353535;
+        font-size: 16px;
+        display: block;
+        background-color: rgba(255,255,255,.25);
+        width: 3.8rem;
+        height: 3.8rem;
+        text-align: center;
+        line-height: 38px;
+        border-radius: 10em;
+        transition: background-color .25s ease;
+        margin: 18px 0;
+
+        &:hover {
+            background-color: rgba(255,255,255,.4);
+        }
+    }
 }
 
