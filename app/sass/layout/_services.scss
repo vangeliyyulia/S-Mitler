@@ -1,0 +1,133 @@
+.services {
+    background-color: #151515;
+
+    //Для чередования стилей в карусели
+    $colors: $blue, $red, $accent;
+    @for $i from 1 through length($colors) {
+        .services__slider .owl-item:nth-child(#{length($colors)}n+#{$i}),
+        .services__slider-aside .owl-item:nth-child(#{length($colors)}n+#{$i}) {
+            background-color: nth($colors, $i);
+        }
+    }
+
+    &__slider-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 300;
+        position: relative;
+
+        &:hover .services__services-image {
+            opacity: 1;
+        }
+    }
+
+    &__slider-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+        padding: 6rem 10% 8rem;     
+    }
+
+    &__list {
+        list-style: none;
+        margin-bottom: 2.5rem;
+    }
+
+    &__item {
+        border-bottom: 1px solid rgba(#000000, .1);
+        padding: 1rem;
+        
+		&:last-child {
+			border-bottom: none;
+        }
+
+        & strong {
+            font-family: 'FiraSansRegular';
+            color: #4a4a4a;
+        }
+    }
+
+    &__heading {
+        text-align: center;
+        font-family: 'RalewayBold';
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 2.8rem;
+        margin-top: .5rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+
+        & span {
+            font-family: 'RalewayLight';
+            font-size: 1.8rem;
+            display: block;
+            font-weight: 300;
+        }
+    }
+
+    &__services-image {
+        background-size: cover;
+        background-position: center top;
+        width: 100%;
+        opacity: .7;
+        transition: opacity .5s ease;
+    }
+}
+
+.services__slider .owl-item .services__logo img {
+    display: inline-block;
+    width: 100px;
+    height: auto;
+}
+
+.services__slider .owl-item:nth-child(2n+2) .services__slider-item {
+    flex-direction: column-reverse;
+
+    @include respond(phone) {
+        flex-direction: column;
+    }
+}
+
+.owl-carousel .owl-nav.disabled {
+	display: block;
+}
+
+.owl-carousel .owl-item {
+    backface-visibility: inherit;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    & div {
+        width: 63.5px;
+        height: 63.5px;
+        background-color: #fff;
+        color: #191919;
+        position: absolute;
+        text-align: center;
+        line-height: 64px;
+        font-size: 26px;
+    }
+}
+
+
+.owl-prev {
+    left: 0;
+}
+
+.owl-next {
+    right: 0;
+}
+
+.owl-dots {
+    display: none;
+}
+

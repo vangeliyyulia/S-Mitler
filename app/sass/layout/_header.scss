@@ -4,6 +4,7 @@
     background-size: cover;
     background-position: top center;
     min-height: 70rem;
+    position: relative;
 
     &::before {
         content: "";

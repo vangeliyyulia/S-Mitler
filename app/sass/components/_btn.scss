@@ -56,4 +56,20 @@
         }
     }
 
+    &--white {
+        background-color: #fff;
+        color: #444;
+
+        &::after {
+            background-color: rgba(0, 0, 0, .6);
+        }
+
+        &:hover,
+        &:active {   
+            &::after {
+                background-color: rgba(0, 0, 0, .2);
+            }
+        }
+    }
+
 }
