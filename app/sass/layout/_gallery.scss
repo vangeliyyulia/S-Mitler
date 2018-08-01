@@ -1,12 +1,18 @@
 .gallery {
-    padding: 5% 0;
+    padding: 5% 8%;
     background-color: #151515;
     color: #fff;
     background-size: cover;
-    background-position: center;
+    background-position: top center;
 
     &__wrapper {
         display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
     }
 
     &__description {
@@ -19,8 +25,33 @@
         }
     }
 
+    &__content {
+        width: 45rem;
+        margin-right: 1.5rem;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+
+    &__images {
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
 }
 
 .fotorama__thumb-border {
-    border-color: #fff;
+    border-color: #3d3c3c;
+}
+		
+.fotorama__active .fotorama__thumb {
+    border-color: #3d3c3c;
+}
+
+.fotorama__nav-wrap {
+    bottom: 1.5rem;
+    position: absolute;
+    padding: 0 3rem;
+    width: 100%;
 }
