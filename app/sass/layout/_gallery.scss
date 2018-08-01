@@ -1,0 +1,26 @@
+.gallery {
+    padding: 5% 0;
+    background-color: #151515;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__description {
+        margin: 3rem 0;
+        font-family: 'RalewayRegular';
+        font-size: 1.6rem;
+
+        & strong {
+            color: $accent;
+        }
+    }
+
+}
+
+.fotorama__thumb-border {
+    border-color: #fff;
+}
