@@ -30,7 +30,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;  
-        padding: 6rem 10% 8rem;     
+        padding: 6rem 10% 8rem;    
+        
+        @include respond(phone) {
+            padding: 20% 5%;
+        }
     }
 
     &__list {

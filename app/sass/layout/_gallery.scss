@@ -41,12 +41,17 @@
     }
 }
 
+.fotorama__thumb {
+   border: 1px solid #fff;
+}
+
 .fotorama__thumb-border {
     border-color: #3d3c3c;
 }
 		
 .fotorama__active .fotorama__thumb {
     border-color: #3d3c3c;
+    border-style: none;
 }
 
 .fotorama__nav-wrap {
