@@ -1,0 +1,114 @@
+.cta {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-position: 25%;
+}
+
+.form {
+    width: 50%;
+    padding: 10% 5%;
+    background-color: rgba($accent, .92);
+	color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    & input, textarea, select,
+    .selectize-control.single input, .selectize-input {
+        font-family: 'RalewayRegular';
+        color: #fff;
+        width: 100%;
+        margin-top: 1.7rem;
+        background-color: transparent;
+        border: rgba(0,0,0,.1) 1px solid;
+        border-bottom: rgba(0,0,0,.1) 2px solid;
+        border-radius: 2px;
+        padding: .8rem 2.2rem;
+        outline: 0;
+        display: inline-block;
+        font-weight: 300;
+        font-size: 1.6rem;
+
+		&::-webkit-input-placeholder {
+			color: #fff;
+            opacity: 1;
+        }
+
+		&:-moz-placeholder {
+			color: #fff;
+            opacity: 1;
+        }
+
+		&::-moz-placeholder {
+			color: #fff;
+            opacity: 1;
+        }
+
+		&:-ms-input-placeholder {
+            color: #fff;
+        }
+    }
+
+    & .option {
+        font-family: 'RalewayRegular';
+        color: #222;
+        padding: 1rem 2rem;
+    }
+
+    &__success {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: flex;
+        z-index: 10;
+        display: none;
+
+        & span {
+            margin: auto;
+        }
+
+        & ~ * {
+            transition: all .5s ease;
+        }
+		
+	    &.active {
+            & ~ * {
+                opacity: .5;
+                filter: blur(10px);
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__logo {
+        width: 10rem;
+        height: auto;
+    }
+
+    &__heading {
+        margin-top: 0;
+		line-height: 1.5;
+		white-space: nowrap;
+		margin-bottom: 0;
+		font-size: 3rem;
+		text-transform: uppercase;
+		font-weight: 800;
+    }
+
+    & p {
+        font-size: 1.6rem;
+        font-family: 'RalewayRegular';
+    }
+}
+

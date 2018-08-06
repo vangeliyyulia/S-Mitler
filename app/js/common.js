@@ -44,4 +44,10 @@ $(function() {
 			ths.find('.services__services-image').css('min-height', thsh);
 		});
 	}carouselService();
+
+	$('select').selectize({
+		create: true,
+		sortField: 'text'
+	});
+
 });
