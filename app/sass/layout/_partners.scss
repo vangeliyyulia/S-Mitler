@@ -1,0 +1,14 @@
+.partners {
+    padding: 5% 0;
+    background-size: cover;
+    background-color: #151515;
+    background-position: center;
+
+    &__item {
+        max-width: 236px;
+
+        & img {
+            max-width: 146px;
+        }
+    }
+}

@@ -21,5 +21,9 @@
 
     &--gallery {
         text-align: left;
+
+        @include respond(phone) {
+            text-align: center;
+        }
     }
 }

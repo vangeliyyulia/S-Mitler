@@ -67,4 +67,33 @@ $(function() {
 		return false;
 	});
 
+	$('.reviews__slider').owlCarousel({
+		loop: true,
+		items: 1,
+		smartSpeed: 700,
+		nav: false
+	});
+
+	$('.partners__slider').owlCarousel({
+		loop: true,
+		smartSpeed: 700,
+		navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+		nav: true,
+		responsiveClass: true,
+		responsive: {
+			0: {
+				items: 1,
+			},
+			768: {
+				items: 2,
+			},
+			992: {
+				items: 3,
+			},
+			1200: {
+				items: 4,
+			}
+		}
+	});
+
 });
