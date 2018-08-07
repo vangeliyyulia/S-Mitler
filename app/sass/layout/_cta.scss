@@ -3,21 +3,25 @@
     background-repeat: no-repeat;
     background-color: #fff;
     background-position: 25%;
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 .form {
     width: 50%;
-    padding: 10% 5%;
+    padding: 10% 8%;
     background-color: rgba($accent, .92);
 	color: #fff;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
 
-    & input, textarea, select,
-    .selectize-control.single input, .selectize-input {
+    & input, textarea, select, 
+    .selectize-control.single .selectize-input {
         font-family: 'RalewayRegular';
         color: #fff;
         width: 100%;
@@ -31,6 +35,7 @@
         display: inline-block;
         font-weight: 300;
         font-size: 1.6rem;
+        line-height: 1.5;
 
 		&::-webkit-input-placeholder {
 			color: #fff;
@@ -86,24 +91,19 @@
         }
     }
 
-    &__wrapper {
-        display: flex;
-        justify-content: flex-end;
-    }
-
     &__logo {
         width: 10rem;
         height: auto;
     }
 
     &__heading {
+        font-family: 'RalewayBold';
         margin-top: 0;
 		line-height: 1.5;
 		white-space: nowrap;
 		margin-bottom: 0;
 		font-size: 3rem;
 		text-transform: uppercase;
-		font-weight: 800;
     }
 
     & p {
@@ -112,3 +112,46 @@
     }
 }
 
+.form .selectize-control.single {
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.form .selectize-control.single .selectize-input::after {
+    border: none;
+    content: '\f107';
+    color: #fff;
+    font-family: fontawesome;
+    position: absolute;
+    right: 30px;
+    top: 12px;
+}
+
+.form .selectize-control.single .selectize-input.dropdown-active::after {
+    border: none;
+    content: '\f106';
+    color: #fff;
+    font-family: fontawesome;
+    position: absolute;
+    right: 30px;
+    top: 12px;
+    cursor: pointer;
+}
+
+.selectize-dropdown {
+    font-size: 15px;
+    border: none;
+    border-radius: 0;
+    text-align: left;
+}
+
+.selectize-input {
+    box-shadow: none;
+    overflow: inherit;
+    line-height: inherit;
+    text-align: left;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
