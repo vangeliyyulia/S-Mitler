@@ -1,0 +1,35 @@
+.preloader {
+    position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #151515;
+	z-index: 100;
+}
+
+.pulse {
+    position: relative;
+	left: 50%;
+    top: 50vh;
+    margin-left: -40px;
+    margin-top: -40px;
+    
+    &::before,
+    &::after {
+        content: '';
+		border: 5px solid #323232;
+		width: 80px;
+		height: 80px;
+		border-radius: 500px;
+		position: absolute;
+    }
+}
+
+.pulse::after {
+    animation: pulse-outer .8s ease-in infinite;
+}
+
+.pulse::before {
+    animation: pulse-inner .8s linear infinite;
+}

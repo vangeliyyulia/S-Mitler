@@ -8,6 +8,10 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-around;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -17,6 +21,10 @@
 
         &:last-child {
             width: calc((100% - 3 * 20%) - 6rem);
+
+            @include respond(tab-port) {
+                width: 100%;
+            }
         }
     }
 
@@ -108,11 +116,19 @@
         font-weight: 300;
         margin: 0 0 2rem;
 
+        @include respond(tab-port) {
+            padding-left: 0;
+        }
+
         &--phone {
             font-size: 2.6rem;
             font-family: 'FiraSansRegular';
             padding-top: 1rem;
             display: block;
+
+            @include respond(phone) {
+                font-size: 2rem;
+            }
         }
     }
 }
@@ -123,6 +139,34 @@
     transition: opacity .5s ease;
 
     &:hover {
+        opacity: 1;
+    }
+}
+
+.top {
+    position: fixed;
+	bottom: 25px;
+	background-color: #E0E0E0;
+	border-radius: 10em;
+	color: #666;
+	font-size: 26px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	transition: all .25s ease;
+	right: -100px;
+	z-index: 12;
+    opacity: .5;
+    
+    &.active {
+        right: 30px;
+    }
+
+    &:hover {
+        color: #fff;
+        background-color: $accent;
         opacity: 1;
     }
 }
