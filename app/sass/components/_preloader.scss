@@ -1,3 +1,8 @@
+@mixin opacity($opacity) {
+    opacity: $opacity / 100;
+    filter: alpha(opacity=$opacity);
+}
+
 .preloader {
     position: fixed;
 	top: 0;
@@ -5,7 +10,7 @@
 	bottom: 0;
 	right: 0;
 	background-color: #151515;
-	z-index: 100;
+    z-index: 100;
 }
 
 .pulse {
@@ -33,3 +38,30 @@
 .pulse::before {
     animation: pulse-inner .8s linear infinite;
 }
+
+@keyframes pulse-outer {
+	0% {
+        @include opacity(100);
+    }
+
+	50% {
+        @include opacity(50);
+    }
+
+	100% {
+        @include opacity(0);
+    }
+}
+
+@keyframes pulse-inner {
+	0% {
+		transform: scale(0);
+        @include opacity(0);
+    }
+
+	100% {
+		transform: scale(1);
+        @include opacity(100);
+    }
+}
+

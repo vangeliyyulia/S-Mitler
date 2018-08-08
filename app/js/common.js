@@ -108,5 +108,8 @@ $(function() {
 			$('.top').removeClass("active");
 		};
 	});
+});
 
+$(window).on('load', function() {
+	$('.preloader').delay(1000).fadeOut('slow');
 });
