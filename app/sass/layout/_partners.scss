@@ -1,14 +1,49 @@
 .partners {
-    padding: 5% 0;
-    background-size: cover;
-    background-color: #151515;
-    background-position: center;
+    padding: 5% 10%;
 
     &__item {
-        max-width: 236px;
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         & img {
             max-width: 146px;
         }
     }
 }
+
+.partners__slider .owl-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+    & div {
+        position: absolute;
+        top: 50px;
+        transition: opacity .5s;
+    }
+}
+
+.partners__slider.owl-carousel .owl-nav>div.owl-prev {
+    left: -20px;
+
+    &:hover {
+        opacity: .5;
+    }
+}
+
+.partners__slider.owl-carousel .owl-nav>div.owl-next {
+    right: -20px;
+
+    &:hover {
+        opacity: .5;
+    }
+}
+
+.partners__slider.owl-carousel .owl-nav>div .fa {
+    color: #999;
+    font-size: 30px;
+}
+

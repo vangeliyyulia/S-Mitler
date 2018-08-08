@@ -1,0 +1,128 @@
+.footer {
+    background-color: #242424;
+    color: #fff;
+    padding: 3% 8%;
+    font-size: 1.4rem;
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+
+        &:last-child {
+            width: calc((100% - 3 * 20%) - 6rem);
+        }
+    }
+
+    &__logo {
+        width: 128px;
+        height: auto;
+    }
+
+    &__heading {
+        color: #777;
+        padding: 0;
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    &__social {
+        margin-top: 3.8rem;
+        opacity: .8;
+    }
+
+    &__list,
+    &__menu-list {
+        list-style: none;
+    }
+
+    &__social-item {
+        display: inline-block;
+        margin: 3px;
+    }
+
+    &__link {
+        font-size: 1.6rem;
+        display: block;
+        color: rgba(255,255,255,.6);
+        background-color: rgba(255,255,255,.25);
+        width: 3.8rem;
+        height: 3.8rem;
+        text-align: center;
+        line-height: 38px;
+        border-radius: 50%;
+        transition: background-color .25s ease;
+        margin: 1.8rem 0;
+
+        &:hover {
+            background-color: rgba(255,255,255,.4);
+        }
+    }
+
+    &__menu-link {
+        font-family: 'RalewayRegular';
+        color: #979797;
+        transition: color .25s ease;
+        display: inline-block;
+        padding: 4px 0;
+        text-decoration: underline;
+        padding-left: 2rem;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            transition: color .25s ease;
+            content: '\f219';
+            font-family: fontawesome;
+            margin-right: 8px;
+            text-decoration: none;
+            font-size: 12px;
+            color: #979797;
+            position: absolute;
+            left: 0;
+            top: .8rem;
+            color: #fff;
+        }
+
+        &.active, &:hover {
+            color: $accent;
+
+            &::before {
+                color: $accent;
+            }               
+        }
+    }
+
+    &__contacts {
+        position: relative;
+        font-family: 'RalewayRegular';
+        font-size: 1.5rem;
+        padding-left: 2rem;
+        font-weight: 300;
+        margin: 0 0 2rem;
+
+        &--phone {
+            font-size: 2.6rem;
+            font-family: 'FiraSansRegular';
+            padding-top: 1rem;
+            display: block;
+        }
+    }
+}
+
+.map {
+    max-height: 200px;
+    opacity: .7;
+    transition: opacity .5s ease;
+
+    &:hover {
+        opacity: 1;
+    }
+}

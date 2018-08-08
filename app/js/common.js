@@ -96,4 +96,6 @@ $(function() {
 		}
 	});
 
+	$(".partners__item").equalHeights();
+
 });
